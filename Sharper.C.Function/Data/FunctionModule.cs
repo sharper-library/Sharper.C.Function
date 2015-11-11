@@ -31,7 +31,7 @@ public static class FunctionModule
     =>
         (b, a) => f(a, b);
 
-    public static Func<A, C> Compose<A, B, C>(this Func<B, C> f, Func<A, B> g)
+    public static Func<A, C> Compose<A, B, C>(Func<B, C> f, Func<A, B> g)
     =>
         a => f(g(a));
 
